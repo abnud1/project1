@@ -1,0 +1,576 @@
+ar:
+  flash_messages:
+    #
+    # These are the translations for the different headings.
+    #
+    headings:
+      success: "نجاح!"
+      info: "ملاحظة!"
+      notice: "ملاحظة!"
+      warning: "تنبيه!"
+      alert: "تنبيه!"
+      error: "خطأ!"
+   #
+    # Add default flash messages:
+    defaults:
+      close: "أغلق"
+    #  success: "This is a notification"
+    #   error: "Something went wrong"
+    #   create:
+    #     success: "Successfully created!"
+    #     error: "Something went wrong. Please take a look at the form to see what went wrong."
+    #
+    # Add flash messages for controller actions:
+    # products:
+    #   create:
+    #     success: "This is a notification"
+    #     error: "Something went wrong"
+    #
+
+  mongoid:
+    models:
+      publisher:
+        one: "الناشر"
+        other: "الناشرون"
+      project:
+        one: 'المشروع'
+        other: 'المشاريع'
+      framework:
+        one: 'بيئة العمل'
+        other: 'بيئات العمل'
+      library:
+        one: 'المكتبة'
+        other: 'المكتبات'
+      programminglanguage:
+        one: 'لغة البرمجة'
+        other: 'لغات البرمجة'
+      category:
+        one: "التصنيف العلمي"
+        other: "التصنيفات العلمية"
+      role:
+        one: "الدور"
+        other: "اﻷدوار"
+      ckeditor:
+        asset:
+          one: "الوسيط"
+          other: "الوسائط"
+        attachment_file:
+          one: "الملف"
+          other: "الملفات"
+        picture:
+          one: "الصورة"
+          other: "الصور"
+        paper:
+          one: "المقالة العلمية"
+          other: "المقالات العلمية"
+    attributes:
+      publisher:
+        username: "اسم المستخدم"
+        password: "كلمة السر"
+        email: "البريد اﻻلكتروني"
+        password_confirmation: "حقل تأكيد كلمة السر"
+      project:
+        title: "العنوان"
+        description: "شرح المشروع"
+    errors:
+      models:
+        publisher:
+          attributes:
+            username:
+              blank: "فارغ، يرجى ملء الحقل"
+            email:
+              blank: "فارغ، يرجى ملء الحقل"
+            password:
+              blank: "فارغة، يرجى ملء الحقل"
+            password_confirmation:
+              blank: "فارغ، يرجى ملء الحقل"
+      messages:
+        blank_in_locale:
+          "لا يمكن أن يكون %{location} فارغاً"
+        message_title: "رسالة"
+        summary_title: "ملخص"
+        resolution_title: "اقتراح"
+        validations:
+          message: "التحقق من %{document} فشل."
+          summary: "اﻷخطاء التالية قد وجدت: %{errors}"
+          resolution: "حاول إعطاء وثيقة صالحة أو
+          قم بإزالة عمليات التحقق"
+        invalid_value:
+          message: "قيمة من النمط %{value_class} لا يمكن أن تكتب في حقل من النمط %{field_class}"
+          summary: "حاول أن يضع قيمة من النمط %{value_class} لحقلٍ من النمط %{field_class}"
+          resolution: "تحقق فيما إذا كانت القيمة المعطاة محققة لتعريف الحقل"
+        taken:
+          "موجودٌ مسبقاً"
+  date:
+    abbr_day_names:
+    - الأحد
+    - الإثنين
+    - الثّلاثاء
+    - الأربعاء
+    - الخميس
+    - الجمعة
+    - السّبت
+    abbr_month_names:
+    -
+    - يناير/كانون الثّاني
+    - فبراير/شباط
+    - مارس/آذَار
+    - إبريل/نَيْسان
+    - مايو/أيار
+    - يونيو/حَزيران
+    - يوليو/تمُّوز
+    - أغسطس/آب
+    - سبتمبر/أيلول
+    - أكتوبر/تشرين الأوّل
+    - نوفمبر/تشرين الثّاني
+    - ديسمبر/كانون الأَوّل
+    day_names:
+    - الأحد
+    - الإثنين
+    - الثّلاثاء
+    - الأربعاء
+    - الخميس
+    - الجمعة
+    - السّبت
+    formats:
+      default: "%Y-%m-%d"
+      long: "%B %e, %Y"
+      short: "%e %b"
+    month_names:
+    -
+    - يناير/كانون الثّاني
+    - فبراير/شباط
+    - مارس/آذَار
+    - إبريل/نَيْسان
+    - مايو/أيار
+    - يونيو/حَزيران
+    - يوليو/تمُّوز
+    - أغسطس/آب
+    - سبتمبر/أيلول
+    - أكتوبر/تشرين الأوّل
+    - نوفمبر/تشرين الثّاني
+    - ديسمبر/كانون الأَوّل
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        zero: حوالي صفر ساعات
+        one: حوالي ساعة واحدة
+        two: حوالي ساعتان
+        few: حوالي %{count} ساعات
+        many: حوالي %{count} ساعة
+        other: حوالي %{count} ساعة
+      about_x_months:
+        zero: حوالي صفر أشهر
+        one: حوالي شهر واحد
+        two: حوالي شهران
+        few: حوالي %{count} أشهر
+        many: حوالي %{count} شهر
+        other: حوالي %{count} شهر
+      about_x_years:
+        zero: حوالي صفر سنوات
+        one: حوالي سنة
+        two: حوالي سنتان
+        few: حوالي %{count} سنوات
+        many: حوالي %{count} سنة
+        other: حوالي %{count} سنة
+      almost_x_years:
+        zero: ما يقرب من صفر سنوات
+        one: تقريبا سنة واحدة
+        two: ما يقرب من سنتين
+        few: ما يقرب من %{count} سنوات
+        many: ما يقرب من %{count} سنة
+        other: ما يقرب من %{count} سنة
+      half_a_minute: نصف دقيقة
+      less_than_x_minutes:
+        zero: أقل من صفر دقائق
+        one: أقل من دقيقة
+        two: أقل من دقيقتان
+        few: أقل من %{count} دقائق
+        many: أقل من %{count} دقيقة
+        other: أقل من %{count} دقيقة
+      less_than_x_seconds:
+        zero: أقل من صفر ثواني
+        one: أقل من ثانية
+        two: أقل من ثانيتان
+        few: أقل من %{count} ثوان
+        many: أقل من %{count} ثانية
+        other: أقل من %{count} ثانية
+      over_x_years:
+        zero: أكثر من صفر سنوات
+        one: أكثر من سنة
+        two: أكثر من سنتين
+        few: أكثر من %{count} سنوات
+        many: أكثر من %{count} سنة
+        other: أكثر من %{count} سنة
+      x_days:
+        zero: صفر أيام
+        one: يوم واحد
+        two: يومان
+        few: "%{count} أيام"
+        many: "%{count} يوم"
+        other: "%{count} يوم"
+      x_minutes:
+        zero: صفر دقائق
+        one: دقيقة واحدة
+        two: دقيقتان
+        few: "%{count} دقائق"
+        many: "%{count} دقيقة"
+        other: "%{count} دقيقة"
+      x_months:
+        zero: صفر أشهر
+        one: شهر واحد
+        two: شهران
+        few: "%{count} أشهر"
+        many: "%{count} شهر"
+        other: "%{count} شهر"
+      x_seconds:
+        zero: صفر ثواني
+        one: ثانية واحدة
+        two: ثانيتان
+        few: "%{count} ثوان"
+        many: "%{count} ثانية"
+        other: "%{count} ثانية"
+    prompts:
+      day: اليوم
+      hour: ساعة
+      minute: دقيقة
+      month: الشهر
+      second: ثانية
+      year: السنة
+  errors:
+    format: "%{attribute} %{message}"
+    messages:
+      already_confirmed: "تمّ تأكيد الحساب مُسبقًا، يُرجى مُحاولة تسجيل الدخول."
+      weak_password: "ليست قوية كفاية، أقترح عليك إضافة رموز،أرقام أو حروف أكثر لجعلها أقوى"
+      confirmation_period_expired: "كان يجب تأكيده خلال %{period}، يُرجى طلب تأكيد الحساب مُجدّدًا."
+      expired: "انتهت صلاحيته، يُرجى الطلب من جديد."
+      not_found: "غير موجود."
+      not_locked: "لم يكن مُعلّقًا."
+      not_saved:
+        one: "لم يتمّ حِفظ %{resource} بسبب الخطأ التّالي:"
+        other: "لم يتمّ حِفظ %{resource} بسبب الأخطاء الـ %{count} التّالية:"
+      accepted: يجب أن تقبل
+      blank: فارغ، يرجى ملء الحقل
+      present: يجب ترك الحقل فارغاً
+      confirmation: لا يتوافق مع %{attribute}
+      empty: فارغ، يرجى ملء الحقل
+      equal_to: يجب أن يساوي %{count}
+      even: يجب أن يكون عددًا زوجيًّا
+      exclusion: محجوز
+      greater_than: يجب أن يكون أكبر من %{count}
+      greater_than_or_equal_to: يجب أن يكون أكبر من أو يساوي %{count}
+      inclusion: غير مُدرج في القائمة
+      invalid: غير مقبول
+      less_than: يجب أن يكون أصغر من %{count}
+      less_than_or_equal_to: يجب أن يكون أصغر من أو يساوي %{count}
+      not_a_number: ليس رقمًا
+      not_an_integer: يجب أن يكون عدداً صحيحاً
+      odd: يجب أن يكون عددًا فرديًّا
+      record_invalid: 'فشل التحقّق من: %{errors}'
+      restrict_dependent_destroy:
+        one: لا يمكن حذف السجل لوجود سجل يعتمد عليه %{record}
+        many: لا يمكن حذف السجل لوجود سجلات تعتمد عليه %{record}
+      taken: محجوز مُسبقًا
+      too_long:
+        zero: أطول من اللّازم (الحد الأقصى هو ولا حرف)
+        one: أطول من اللّازم (الحد الأقصى هو حرف واحد)
+        two: أطول من اللّازم (الحد الأقصى هو حرفان)
+        few: أطول من اللّازم (الحد الأقصى هو %{count} حروف)
+        many: أطول من اللّازم (الحد الأقصى هو %{count} حرف)
+        other: أطول من اللّازم (الحد الأقصى هو %{count} حرف)
+      too_short:
+        zero: أقصر من اللّازم (الحد الأدنى هو ولا حرف)
+        one: أقصر من اللّازم (الحد الأدنى هو حرف واحد)
+        two: أقصر من اللّازم (الحد الأدنى هو حرفان)
+        few: أقصر من اللّازم (الحد الأدنى هو %{count} حروف)
+        many: أقصر من اللّازم (الحد الأدنى هو %{count} حرف)
+        other: أقصر من اللّازم (الحد الأدنى هو %{count} حرف)
+      wrong_length:
+        zero: الطول غير مطابق للحد المطلوب (يجب أن يكون ولا حرف)
+        one: الطول غير مطابق للحد المطلوب (يجب أن يكون حرف واحد)
+        two: الطول غير مطابق للحد المطلوب (يجب أن يكون حرفان)
+        few: الطول غير مطابق للحد المطلوب (يجب أن يكون %{count} أحرف)
+        many: الطول غير مطابق للحد المطلوب (يجب أن يكون %{count} حرف)
+        other: الطول غير مطابق للحد المطلوب (يجب أن يكون %{count} حرف)
+      other_than:
+        zero: الطول يجب ألاّ يكون صفر أحرف
+        one: الطول يجب ألاّ يكون حرفاً وحداً
+        two: الطول يجب ألاّ يكون حرفان
+        few: الطول يجب ألاّ يكون %{count} أحرف
+        many: الطول يجب ألاّ يكون %{count} حرفاً
+        other: الطول يجب ألاّ يكون %{count} حرفاً
+    template:
+      body: 'يُرجى التحقّق من الحقول التّالية:'
+      header:
+        zero: 'ليس بالامكان حفظ %{model}: لايوجد أخطاء.'
+        one: 'ليس بالامكان حفظ %{model}: خطأ واحد.'
+        two: 'ليس بالامكان حفظ %{model}:  خطئان.'
+        few: 'ليس بالامكان حفظ %{model}: %{count} أخطاء.'
+        many: 'ليس بالامكان حفظ %{model}: %{count} أخطاء.'
+        other: 'ليس بالامكان حفظ %{model}: %{count} خطأ.'
+  helpers:
+    select:
+      prompt: يُرجى الاختيار
+    submit:
+      create: "%{model} إنشاء"
+      submit: "%{model} حِفظ"
+      update: "%{model} تحديث"
+  number:
+    currency:
+      format:
+        delimiter: ","
+        format: "%u%n"
+        precision: 2
+        separator: "."
+        significant: false
+        strip_insignificant_zeros: false
+        unit: "$"
+    format:
+      delimiter: ","
+      precision: 3
+      separator: "."
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: "%n %u"
+        units:
+          billion: مليار
+          million: مليون
+          quadrillion: كدريليون
+          thousand: ألفّ
+          trillion: تريليون
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 3
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: "%n %u"
+        units:
+          byte:
+            zero: Bytes
+            one: Byte
+            two: Bytes
+            few: Bytes
+            many: Bytes
+            other: Bytes
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+        format: "%n%"
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: " و "
+      two_words_connector: " و "
+      words_connector: " و "
+  time:
+    am: صباحًا
+    formats:
+      default: "%a %b %d %H:%M:%S %Z %Y"
+      long: "%B %d, %Y %H:%M"
+      short: "%d %b %H:%M"
+    pm: مساءً
+  admin:
+    loading: "تحميل..."
+    home:
+      name: "البداية"
+    pagination:
+      previous: "&laquo; السابق"
+      next: "التالي &raquo;"
+      truncate: "…"
+    misc:
+      filter_date_format: "mm/dd/yy"
+      search: "بحث"
+      filter: "تصفية"
+      refresh: "تحديث"
+      show_all: "إظهار الكل"
+      add_filter: "إضافة عامل تصفية"
+      bulk_menu_title: "اختر فقرة"
+      remove: "إزالة"
+      add_new: "إضافة جديد"
+      chosen: "Chosen %{name}"
+      chose_all: "اختيار الكل"
+      clear_all: "إزالة الكل"
+      up: "للأعلى"
+      down: "للأسفل"
+      navigation: "قائمة التصفح"
+      navigation_static_label: "روابط"
+      log_out: "تسجيل الخروج"
+      ago: "مضت"
+    flash:
+      successful: " تم بنجاح %{action} %{name}"
+      error: "%{name} فشل بعملية %{action}"
+      noaction: "لم يتم تلقي أي عملية"
+      model_not_found: "Model '%{model}' غير موجود"
+      object_not_found: "%{model} ذا الرقم التسلسلي '%{id}' غير موجود"
+    table_headers:
+      model_name: "اسم النموذج"
+      last_used: "آخر استخدام"
+      records: "التسجيلات/المحفوظات"
+      username: "المستخدم"
+      changes: "تغييرات"
+      created_at: "تاريخ/وقت"
+      item: "عنصير"
+      message: "رسالة"
+    actions:
+      dashboard:
+        title: "إدارة الموقع"
+        menu: "لوحة المعلومات"
+        breadcrumb: "لوحة المعلومات"
+      index:
+        title: "قائمة %{model_label_plural}"
+        menu: "قائمة"
+        breadcrumb: "%{model_label_plural}"
+      show:
+        title: "تفاصيل عن %{model_label} '%{object_label}'"
+        menu: "عرض"
+        breadcrumb: "%{model_label}"
+      show_in_app:
+        menu: "عرض بالمشروع"
+      new:
+        title: "%{model_label} جديد"
+        menu: إضافة جديد
+        breadcrumb: "جديد"
+        link: "إضافة %{model_label} جديد"
+        done: "إضافة"
+      edit:
+        title: "تعديل %{model_label} '%{object_label}'"
+        menu: "تعديل"
+        breadcrumb: "تعديل"
+        link: "تعديل %{model_label}"
+        done: "تعديل"
+      delete:
+        title: "حذف %{model_label} '%{object_label}'"
+        menu: "حذف"
+        breadcrumb: "حذف"
+        link: "حذف '%{object_label}'"
+        done: "حذف"
+      bulk_delete:
+        title: "حذف %{model_label_plural}"
+        menu: "حذف مضاعف"
+        breadcrumb: "حذف مضاعف"
+        bulk_link: "حذف المختار %{model_label_plural}"
+      export:
+        title: "تصدير %{model_label_plural}"
+        menu: "تصدير"
+        breadcrumb: "تصدير"
+        link: "تصدير %{model_label_plural} الموجودة"
+        bulk_link: "تصدير الكائنات المحددة"
+        done: "مصدر"
+      history_index:
+        title: "تأريخ ل %{model_label_plural}"
+        menu: "تأريخ"
+        breadcrumb: "تأريخ"
+      history_show:
+        title: "تأريخ ل %{model_label} '%{object_label}'"
+        menu: "تأريخ"
+        breadcrumb: "تأريخ"
+    form:
+      cancel: "إلغاء"
+      basic_info: "معلومات أساسية"
+      required: "مطلوب"
+      optional: "اختياري"
+      one_char: "رمز"
+      char_length_up_to: "الطول الأعظم "
+      char_length_of: "طول "
+      save: "حفظ"
+      save_and_add_another: "حفظ وإضافة أخر"
+      save_and_edit: "حفظ وتعديل"
+
+      all_of_the_following_related_items_will_be_deleted: "؟ قد يتم حذف العناصر التالية المرتبطة به :"
+      are_you_sure_you_want_to_delete_the_object: " هل انت متأكد أنك تريد حذف  هذا %{model_name} ؟"
+      confirmation: "نعم, متأكد"
+      bulk_delete: " سيتم حذف الكائنات التالية، مما قد يؤدي إلى حذف الكائنات المرتبطة بهم او ابقاءها منفصلة عنهم "
+      new_model: "%{name} (جديد)"
+    export:
+      confirmation: "تصدير إلى %{name}"
+      select: "اختيار الحقول للتصدير"
+      select_all_fields: "اختيار كل الحقول"
+      fields_from: "حقول من %{name}"
+      fields_from_associated: "حقول من النماذج المرتبطة %{name}"
+      display: "إظهار %{name}: %{type}"
+      options_for: "خيارات %{name}"
+      empty_value_for_associated_objects: "<فارغ>"
+      click_to_reverse_selection: ' انقر لعكس التحديد '
+      csv:
+        header_for_root_methods: "%{name}" # 'النموذج' متوفر
+        header_for_association_methods: "%{name} [%{association}]"
+        encoding_to: "ترميز"
+        encoding_to_help: "اختر ترميز الخرج.اتركه فارغا لترك ترميز الدخل كما هو: (%{name})"
+        skip_header: "لا يوجد ترويسة"
+        skip_header_help: " لا يوجد خرج للترويسة ( لا يوجد حقول الوصف)"
+        default_col_sep: ","
+        col_sep: "الفاصل بين الحقول"
+        col_sep_help: "اتركه فارغا لتعين الفاصل الافتراضي ('%{value}')" # الفاصل الافتراضي default_col_sep
+  breadcrumbs:
+    application:
+      root: "الصفحة الرئيسية"
+    pages:
+      pages: "صفحات"
+  helpers:
+    actions: "أفعال"
+    links:
+      back: "للخلف"
+      cancel: "إلغاء اﻷمر"
+      confirm: "هل أنت متأكد؟"
+      destroy: "حذف"
+      new: "جديد"
+      edit: "تعديل"
+    titles:
+      edit: "تعديل %{model}"
+      save: "حفظ %{model}"
+      new: "%{model} جديد"
+      delete: "حذف %{model}"
+  email: "البريد اﻹلكتروني"
+  login: "تسجيل الدخول"
+  password: "كلمة السر"
+  password_confirmation: "تأكيد كلمة المرور"
+  signup: التسجيل
+  username: "اسم المستخدم"
+  signout: "تسجيل الخروج"
+  characters_minimum: "على اﻷقل"
+  resend_confirmation_instructions: "أعد إرسال معلومات التأكيد"
+  welcome: "أهلاً"
+  confirm_message: "يمكنك تأكيد حسابك من خلال الرابط التالي:"
+  confirm_link: "تأكيد الحساب"
+  new_password: "كلمة السر الجديدة"
+  change_password: "غير كلمة السر"
+  send_reset_password: "أرسل تعليمات تغيير كلمة السر"
+  forgot_password: "نسيت كلمة السر ؟"
+  didnt_receive_confirmation: "لم تصلك رسالة التأكيد"
+  reset_instruction: "أحدٌ ما أرسل رسالة تغيير كلمة السر، إن كنت قد فعلت ذلك فيمكنك تغيير كلمة السر من الرابط التالي:"
+  ignore_reset_email: "إذا لم تكن صاحب الطلب يمكنك تجاهل هذه الرسالة."
+  sign_in_with_provider: "سجل الدخول بـ %{provider}"
+  search: "بحث"
+  empty_results: 'لا توجد نتائج'
+  categories: "التصنيفات العلمية"
+  category: "التصنيف العلمي"
+  add_paper: "إضافة مقالة"
+  add_the_paper: "إضافة المقالة"
+  by: "قام بالنشر"
+  state: "الحالة"
+  back: "للخلف"
+  title: "العنوان"
+  content: "المحتوى"
+  tags: "الوسوم"
+  file: "الملف"
+  keywords: "كلمات مفتاحية"
+  other_researchers: "باحثون آخرون"
+  websiteurl: "موقع الوب"
+  birthdate: "تاريخ الميلاد"
+  address: "العنوان"
+  phone: "هاتف"
+  spam_comment: "تعليق مشوش الرجاء التعديل"
