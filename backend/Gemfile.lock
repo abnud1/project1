@@ -55,10 +55,11 @@ GEM
       tzinfo (~> 1.1)
     ambry (1.0.0)
     arel (7.1.4)
-    bcrypt (3.1.11-x64-mingw32)
+    bcrypt (3.1.11)
     bson (4.2.1)
     bson_ext (1.5.1)
     builder (3.2.3)
+    byebug (9.0.6)
     carrierwave (1.0.0)
       activemodel (>= 4.0.0)
       activesupport (>= 4.0.0)
@@ -122,7 +123,7 @@ GEM
     multi_json (1.12.1)
     multipart-post (2.0.0)
     nio4r (2.0.0)
-    nokogiri (1.7.0.1-x64-mingw32)
+    nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
     puma (3.7.1)
@@ -179,8 +180,6 @@ GEM
     thread_safe (0.3.6)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2017.1)
-      tzinfo (>= 1.0.0)
     warden (1.2.7)
       rack (>= 1.0)
     websocket-driver (0.6.5)
@@ -188,7 +187,7 @@ GEM
     websocket-extensions (0.1.2)
 
 PLATFORMS
-  x64-mingw32
+  ruby
 
 DEPENDENCIES
   byebug
