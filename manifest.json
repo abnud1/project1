@@ -1,6 +1,6 @@
 {
   "name": "CHANGE THIS : Extension boilerplate",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "manifest_version": 2,
   "description": "This extension was created with the awesome extensionizr.com",
   "homepage_url": "http://extensionizr.com",
@@ -9,17 +9,26 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "default_locale": "en",
+  "default_locale": "en",  
   "background": {
     "scripts": [
-      "src/bg/background.js"
+      "node_modules/jquery/dist/jquery.min.js", "src/bg/background.js"
     ],
     "persistent": false
   },
+  "content_scripts": [
+    {
+      "matches" : ["<all_urls>"],
+      "js": ["src/content_scripts/videocs.js"]
+    }
+  ],
   "options_page": "src/options_custom/index.html",
   "page_action": {
     "default_icon": "icons/icon19.png",
     "default_title": "page action demo",
     "default_popup": "src/page_action/page_action.html"
-  }
+  },
+  "permissions":[
+    "downloads"
+  ]
 }

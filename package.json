@@ -1,0 +1,25 @@
+{
+  "name": "project1",
+  "version": "1.0.0",
+  "description": "our project 1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abnud1/project1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abnud1/project1/issues"
+  },
+  "homepage": "https://github.com/abnud1/project1#readme",
+  "devDependencies": {
+    "@types/chrome": "0.0.46",
+    "@types/jquery": "^2.0.41",
+    "@types/lodash": "^4.14.63",
+    "@types/webrtc": "0.0.21"
+  },
+  "dependencies": {
+    "browser-require": "^0.1.6",
+    "jquery": "^3.2.1"
+  }
+}
