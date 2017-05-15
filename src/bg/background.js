@@ -57,3 +57,20 @@ chrome.runtime.onMessage.addListener((req) => {
             throw new Error("unsupported message type");
     }
 });
+
+
+function genericOnClick(info, tab) {
+  chrome.tabs.create({url:"src/page_action/download-video.html"});
+}
+
+// Create one test item for each context type.
+var contexts = ["video"];
+
+for (var i = 0; i < contexts.length; i++) {
+  var context = contexts[i];
+  var title = "تحميل هذا الفيديو";
+  var id = chrome.contextMenus.create({"id":"parent","title": title, "contexts":[context]});
+//   var id = chrome.contextMenus.create({"id":"parent","title": title, "contexts":[context],"onclick": genericOnClick});
+}
+
+chrome.contextMenus.onClicked.addListener(genericOnClick)
