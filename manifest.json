@@ -29,6 +29,6 @@
     "default_popup": "src/page_action/page_action.html"
   },
   "permissions":[
-    "downloads"
+    "downloads","tabs", "<all_urls>","contextMenus"
   ]
 }
