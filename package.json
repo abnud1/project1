@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "browser-require": "^0.1.6",
-    "jquery": "^3.2.1"
+    "jquery": "^3.2.1",
+    "recordrtc": "^5.4.1"
   }
 }

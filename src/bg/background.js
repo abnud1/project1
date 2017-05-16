@@ -25,8 +25,9 @@ function downloadordinaryvideo(url) {
 /**
  * 
  * @param {string} video_id 
+ * @param {number} videoindex
  */
-function downloadyoutubevideo(video_id){
+function downloadyoutubevideo(video_id,videoindex){
   $.ajax({  
     url: "http://www.youtube.com/get_video_info?video_id="+video_id,  
     dataType: "text"  
@@ -41,14 +42,14 @@ function downloadyoutubevideo(video_id){
       }  
       return Promise.resolve(results);  
   }).then(streams => {
-      chrome.downloads.download({url: streams[0].get('url'),saveAs: true,filename: 'video.mp4'});
+      chrome.downloads.download({url: streams[videoindex].get('url'),saveAs: true,filename: 'video.mp4'});
   })
 }
 
 chrome.runtime.onMessage.addListener((req) => {
     switch (req.type) {
         case 'youtube':            
-            downloadyoutubevideo(req.id);
+            downloadyoutubevideo(req.id,req.index);
             break;    
         case 'ordinaryvideo':
             downloadordinaryvideo(req.url);
