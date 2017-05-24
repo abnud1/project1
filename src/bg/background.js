@@ -3,22 +3,12 @@
 // var settings = new Store("settings", {
 //     "sample_setting": "This is how you use Store.js to remember values"
 // });
-
-/**
- * 
- * @param {string} url 
- * @return {string} 
- */
-function getfileName(url){
-    const pathsegments = new URL(url).pathname.split('/');
-    return pathsegments[pathsegments.length -1];
-}
 /**
  * 
  * @param {string} url 
  */
 function downloadordinaryvideo(url) {
-    chrome.downloads.download({url: url,saveAs: true,filename: getfileName(url)});
+    chrome.downloads.download({url: url});
 }
 
 
@@ -46,22 +36,43 @@ function downloadyoutubevideo(video_id,videoindex){
   })
 }
 
-chrome.runtime.onMessage.addListener((req) => {
-    switch (req.type) {
-        case 'youtube':            
-            downloadyoutubevideo(req.id,req.index);
-            break;    
-        case 'ordinaryvideo':
-            downloadordinaryvideo(req.url);
-            break;    
-        default:
-            throw new Error("unsupported message type");
-    }
-});
-
-
 function genericOnClick(info, tab) {
-  chrome.tabs.create({url:"src/page_action/download-video.html"});
+        /**
+     * 
+     * @param {string} url 
+     * @return {boolean}
+     */
+    function isordinary(url){
+        return url.startsWith('http') || url.startsWith('https') || url.startsWith('file');
+    }
+
+    /**
+     * @param {Location|URL} url
+     * @return {boolean} 
+     */
+    function isYoutube(url){
+        return url.hostname == "www.youtube.com"
+    }
+
+    /**
+     * 
+     * @param {Location|URL} url 
+     * @return {string}
+     */
+    function getvideoid(url) {
+        url = (url instanceof Location) ? new URL(url) : url;    
+        return url.searchParams.get('v') || (() => {
+            const parts=url.pathname.split('/');
+            return parts[parts.length-1];
+        })();
+    }
+    if(isordinary(info.srcUrl)){
+        downloadordinaryvideo(info.srcUrl);
+    }
+    const url = new URL(info.frameUrl || info.pageUrl);
+    if(isYoutube(url)){
+        downloadyoutubevideo(getvideoid(url),0);
+    }
 }
 
 // Create one test item for each context type.
