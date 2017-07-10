@@ -1,13 +1,13 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
-  "version": "0.0.3",
+  "name": "VideoFastDownload",
+  "version": "1.0.0",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
+  "description": "Video Downloader and Recorder",
   "homepage_url": "http://extensionizr.com",
   "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
+    "16": "icons/download-16.png",
+    "48": "icons/download-48.png",
+    "128": "icons/download-128.png"
   },
   "default_locale": "en",  
   "background": {
